@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Is It Francis' Birthday?</title>
+        <style>
+			
+			#answer {
+				text-align: center;
+				font-size: 100pt;
+
+        </style>
+    </head>
+    <body>
+		
+
+		<p id ="answer">What are clouds?</p>
+
+		
+    <script>
+		var today = new Date();
+		var dd = today.getDate();
+		var mm = today.getMonth()+1;
+		var nameEl = document.getElementById("answer");
+		
+		if (dd != 26 && mm != 10){
+			nameEl.innerHTML = "No";
+		} else {
+			nameEl.innerHTML = "Yes";
+		}
+		
+    </script>
+        
+    </body>
+</html>
