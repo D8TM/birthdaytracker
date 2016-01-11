@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Is It Caroline's Birthday?</title>
+        <style>
+			
+			#answer {
+				text-align: center;
+				font-size: 100pt;
+
+        </style>
+    </head>
+    <body>
+		
+		<p id ="start">Is it 
+		<select id ="question">
+		  <option value = "0">Alana</option>
+		  <option value = "1">Caroline</option>
+		  <option value = "2">Francis</option>
+		  <option value = "3">Long</option>
+		</select>'s birthday?</p>
+
+		<p id ="answer">One of these days...</p>
+
+		
+    <script>
+		var today = new Date();
+		var dd = today.getDate();
+		var mm = today.getMonth()+1;
+		var nameEl = document.getElementById("answer");
+		
+		var e = document.getElementById("question");
+		var bd = e.options[e.selectedIndex].value;
+		
+		
+		if (dd == n[bd].dd && mm == n[bd].mm){
+			nameEl.innerHTML = "Yes";
+		} else {
+			nameEl.innerHTML = "No";
+		}
+		
+    </script>
+    
+	<script src="dates.js"></script>
+	
+    </body>
+</html>
