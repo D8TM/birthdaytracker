@@ -2,27 +2,24 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Is It Caroline's Birthday?</title>
+        <title>Is There a Birthday?</title>
         <style>
 			
 			#answer {
 				text-align: center;
 				font-size: 100pt;
-
         </style>
     </head>
     <body>
 		
 		<p id ="start">Is it 
-		<select id ="question">
+		<select id ="question"  onchange="location.reload()">
 		  <option value = "0">Alana</option>
 		  <option value = "1">Caroline</option>
 		  <option value = "2">Francis</option>
 		  <option value = "3">Long</option>
 		</select>'s birthday?</p>
-
 		<p id ="answer">One of these days...</p>
-
 		
     <script>
 		var today = new Date();
@@ -33,6 +30,13 @@
 		var e = document.getElementById("question");
 		var bd = e.options[e.selectedIndex].value;
 		
+		var n = [
+			{dd: 22, mm: 02, name: "Alana"},
+			{dd: 14, mm: 01, name: "Caroline"},
+			{dd: 26, mm: 10, name: "Francis"},
+			{dd: 18, mm: 03, name: "Long"},
+		];
+		
 		
 		if (dd == n[bd].dd && mm == n[bd].mm){
 			nameEl.innerHTML = "Yes";
@@ -40,9 +44,7 @@
 			nameEl.innerHTML = "No";
 		}
 		
-    </script>
-    
-	<script src="dates.js"></script>
+	</script>	
 	
     </body>
 </html>
